@@ -1,0 +1,42 @@
+{
+  "expo": {
+    "name": "Dibatech",
+    "slug": "Dibatech",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/images/dibatechlogo.png",
+    "scheme": "dibatech",
+    "userInterfaceStyle": "automatic",
+    "newArchEnabled": true,
+    "ios": {
+      "supportsTablet": true
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/images/dibatechlogo.png",
+        "backgroundColor": "#1A3A3A"
+      },
+      "edgeToEdgeEnabled": true
+    },
+    "web": {
+      "bundler": "metro",
+      "output": "static",
+      "favicon": "./assets/images/dibatechlogo.png"
+    },
+    "plugins": [
+      "expo-router",
+      [
+        "expo-splash-screen",
+        {
+          "image": "./assets/images/dibatechlogo.png",
+          "imageWidth": 200,
+          "resizeMode": "contain",
+          "backgroundColor": "#1A3A3A"
+        }
+      ]
+    ],
+    "experiments": {
+      "typedRoutes": true
+    }
+  }
+}
