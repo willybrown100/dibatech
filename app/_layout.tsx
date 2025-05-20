@@ -4,5 +4,7 @@ import "@/app/globals.css"
 
 export default function RootLayout() {
  
-  return <Stack />;
+  return <Stack>
+    <Stack.Screen options={{headerShown:false}} name="index"/>
+  </Stack>;
 }
