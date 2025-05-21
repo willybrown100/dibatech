@@ -1,10 +1,16 @@
-import { StyleSheet, Text, TouchableOpacity, View } from 'react-native'
+import { Text, TouchableOpacity, View } from 'react-native'
 import React from 'react'
 
-const CustomButtom = () => {
+interface buttonType {
+  handlePress :()=>void;
+  title:string
+containerStyle?:string
+}
+const CustomButtom = ({handlePress,containerStyle,title}:buttonType) => {
+
   return (
-    <TouchableOpacity className='bg-[#098000] p-3 rounded-2xl w-[80%]'>
-      <Text className='text-white tracking-wider text-center uppercase font-semibold'>get started</Text>
+    <TouchableOpacity onPress={handlePress} className={`${containerStyle} bg-[#008000] p-3 rounded-2xl w-[80%]`}>
+      <Text className='text-white tracking-wider text-center uppercase font-semibold'>{title}</Text>
     </TouchableOpacity>
   )
 }
