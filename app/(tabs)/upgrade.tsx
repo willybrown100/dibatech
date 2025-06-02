@@ -1,14 +1,14 @@
 import { StyleSheet, Text, View } from 'react-native'
 import React from 'react'
 
-const home = () => {
+const upgrade = () => {
   return (
     <View>
-      <Text>home</Text>
+      <Text>upgrade</Text>
     </View>
   )
 }
 
-export default home
+export default upgrade
 
 const styles = StyleSheet.create({})

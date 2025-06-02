@@ -1,8 +1,8 @@
-import { Text, TouchableOpacity, View } from 'react-native'
+import { Text, TouchableOpacity,  } from 'react-native'
 import React from 'react'
 
 interface buttonType {
-  handlePress :()=>void;
+  handlePress ?:()=>void;
   title:string
 containerStyle?:string
 }
