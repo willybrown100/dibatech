@@ -13,4 +13,6 @@ import circleUser from "@/assets/icons/circleUser.png"
 import gear from "@/assets/icons/gear.png"
 import arrowup from "@/assets/icons/arrowup.png"
 import arrowback from "@/assets/icons/arrowback.png"
-export default {eye,eyehide,apple,facebook,instagram,google, arrowback, gear,circleUser,graduationcap,code,rocket,trophy,user,arrowup}
+import darkmode from "@/assets/icons/darkmode.png"
+import goal from "@/assets/icons/goal.png"
+export default {eye,eyehide,apple,facebook,instagram,google, arrowback, gear,circleUser,graduationcap,code,rocket,trophy,user,arrowup,darkmode,goal}

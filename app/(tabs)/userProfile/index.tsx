@@ -9,45 +9,47 @@ const {width}=Dimensions.get("window")
 
 const UserHome = () => {
   const navigation = useNavigation();
+  
+  const router = useRouter()
   useLayoutEffect(() => {
+    const handleClicktoProfileSetting = () => {
+     router.push("/(tabs)/userProfile/profileSetting")
+    };
     navigation.setOptions({
+  
             headerTitle: () => <CustomTitle />,
         headerShown: true,
            headerTitleAlign: 'center',
       title: "Profile",
       headerStyle: {
-        backgroundColor: "#1A3A3A", // 🔵 background color
+        backgroundColor: "#1A3A3A", 
       },
-      headerTintColor: "#ffffff", // ⚪ text and icon color
+      headerTintColor: "#ffffff",
       headerTitleStyle: {
         fontWeight: "bold",
       },
+        headerRight: () => (
+       <Pressable className='items-end' onPress={handleClicktoProfileSetting}>
+    <Image source={icons.gear}/>
+  </Pressable>
+    ),
     });
-  }, [navigation]);
+  }, [navigation,router]);
 
-  const router = useRouter()
   const handleClick = function(){
     router.push("/(tabs)/userProfile/addBio")
   }
 
-  const handleClicktoProfileSetting = () => {
-     router.push("/(tabs)/userProfile/profileSetting")
-    };
+
+
+
   return (
     <View     className=' bg-primary100 flex-1  px-4'>
 <ScrollView     showsVerticalScrollIndicator={false}
   
     contentContainerStyle={{ paddingBottom: 20 }} >
 
-  <View className='flex-row justify-between mt-8 mb-8 items-center '>
-<View style={styles.text} className='bg-gray-500 py-1 px-3 mx-auto rounded-lg'>
-
-  <Text   className='text-white  text-center  tracking-wider font-semibold'>Profile</Text>
-</View>
-  <Pressable className='items-end' onPress={handleClicktoProfileSetting}>
-    <Image source={icons.gear}/>
-  </Pressable>
-  </View>
+ 
 
     <View className='justify-center gap-y-3 items-center'>
         <Image source={icons.circleUser} className={`${width<360?"w-[100px]":"w-[150px]"} ${width<360?"h-[100px]":"h-[150px]"}` } resizeMode='contain'/>
@@ -114,9 +116,10 @@ const styles = StyleSheet.create({
 
 export function CustomTitle() {
   return (
-    <View style={styles.titleContainer}>
-      <Text style={styles.titleText}>Profile</Text>
-    </View>
+   <View style={styles.text} className='bg-gray-500 py-1 px-3 mx-auto rounded-lg'>
+
+  <Text   className='text-white  text-center  tracking-wider font-semibold'>Profile</Text>
+</View>
   );
 }
 
