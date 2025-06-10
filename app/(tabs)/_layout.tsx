@@ -44,7 +44,7 @@ return<View className='flex-col items-center justify-center w-full flex-1 '>
   }}
 />
 
-<Tabs.Screen name='practice' options={{title:"practice",
+<Tabs.Screen name='practice' options={{title:"practice", headerShown:false,
     tabBarIcon: ({ color, focused }) => (
       <TabBarIcon icon={icons.code} name="practice" focused={focused} color={color} />
     ),}}/>

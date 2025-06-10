@@ -4,7 +4,12 @@ module.exports = {
     presets:[require("nativewind/preset")],
   theme: {
     extend: {
-      colors:{darkWhite:"#D9D9D9",primary100:"#1A3A3A",primary200:"#008000"}
+      colors:{darkWhite:"#D9D9D9",primary100:"#122F2F",primary200:"#008000"},
+      fontFamily:{
+        montseratBold:["Montserrat-Bold","sans serif"],
+        montseratRegular:["Montserrat-Regular", "sans-serif"],
+        montseratMedium:["Montserrat-Medium", "sans-serif"],
+      }
     },
   },
   plugins: [],

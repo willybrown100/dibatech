@@ -1,9 +1,9 @@
 import { Dimensions, Image, Pressable, ScrollView, StyleSheet, Text, TouchableOpacity, View } from 'react-native'
 import React, { useLayoutEffect } from 'react'
 import { router, useNavigation, useRouter } from 'expo-router'
-import { SafeAreaView } from 'react-native-safe-area-context'
 import icons from '@/constants/icons'
 import images from '@/constants/images'
+import CustomHeaderTitle from '@/components/CustomHeaderTitle'
 const {width}=Dimensions.get("window")
 
 
@@ -17,7 +17,7 @@ const UserHome = () => {
     };
     navigation.setOptions({
   
-            headerTitle: () => <CustomTitle />,
+            headerTitle: () => <CustomHeaderTitle title="profile" />,
         headerShown: true,
            headerTitleAlign: 'center',
       title: "Profile",
@@ -37,11 +37,9 @@ const UserHome = () => {
   }, [navigation,router]);
 
   const handleClick = function(){
+    // navigation.navigate("/(tabs)/userProfile/addBio")
     router.push("/(tabs)/userProfile/addBio")
   }
-
-
-
 
   return (
     <View     className=' bg-primary100 flex-1  px-4'>
@@ -95,11 +93,7 @@ const UserHome = () => {
 export default UserHome
 
 const styles = StyleSheet.create({
-  text:{
-    elevation:8,
-    shadowColor:"black"
 
-  },
     titleContainer: {
     backgroundColor: '#FFD700', // gold background color for the title
     paddingHorizontal: 10,
@@ -114,12 +108,5 @@ const styles = StyleSheet.create({
 
 })
 
-export function CustomTitle() {
-  return (
-   <View style={styles.text} className='bg-gray-500 py-1 px-3 mx-auto rounded-lg'>
 
-  <Text   className='text-white  text-center  tracking-wider font-semibold'>Profile</Text>
-</View>
-  );
-}
 

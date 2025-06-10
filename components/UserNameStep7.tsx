@@ -23,7 +23,7 @@ const UserNameStep7 = ({currentSurveyItem,handleNext}:step6Type) => {
       <Image source={currentSurveyItem.image} className='mx-auto'/>
       <Text className={`text-white text-center  uppercase mb-2 ${width >360 ? "text-[13px]":"text-[20px]"}`}>{currentSurveyItem.subTitle}</Text>
    
-      <TextInput className='bg-darkWhite rounded-full'/>
+      <TextInput className='bg-darkWhite rounded-full py-3'/>
       <View className='justify-center items-center mt-[10rem]'>
 
       <CustomButtom containerStyle='' title='continue' handlePress={handleNext}/>

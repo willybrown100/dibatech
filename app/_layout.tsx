@@ -1,9 +1,32 @@
-import { Stack } from "expo-router";
+import { SplashScreen, Stack } from "expo-router";
 import "@/app/globals.css"
+import { useEffect } from "react";
+import {useFonts} from "expo-font"
+
 // import * as SplashScreen from 'expo-splash-screen';
 
 export default function RootLayout() {
- 
+   const [fontsLoaded, error]=useFonts({
+    "Montserrat-Bold":require("../assets/fonts/Montserrat-Bold.ttf"),
+    "Montserrat-Regular":require("../assets/fonts/Montserrat-Regular.ttf"),
+    "Montserrat-Medium":require("../assets/fonts/Montserrat-Medium.ttf"),
+
+  })
+useEffect(() => {
+  if (error) throw error;
+
+  if (!fontsLoaded) return;
+
+  // ✅ Hide splash screen once fonts are loaded
+  SplashScreen.hideAsync();
+
+  // ✅ Apply global font (safely bypassing TS)
+  (Text as any).defaultProps = {
+    ...(Text as any).defaultProps,
+    style: { fontFamily: 'Montserrat-Regular' },
+  };
+}, [fontsLoaded, error]);
+
   return <Stack>
     <Stack.Screen options={{headerShown:false}} name="index"/>
     <Stack.Screen options={{headerShown:false}} name="(auth)"/>
