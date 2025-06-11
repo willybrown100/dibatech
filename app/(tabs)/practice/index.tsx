@@ -30,12 +30,15 @@ const Index = () => {
    <View className='bg-primary100 flex-1 px-4'>
 <View className='flex-row justify-between mt-6'>
 
-      <Text className='text-white'>Playgrounds</Text>
-      <Text className='text-white'>+ CREATE NEW</Text>
+      <Text className='text-darkWhite'>Playgrounds</Text>
+    <Link href="/(tabs)/practice/codingSpace"> 
+    <Text className='text-darkWhite'>+ CREATE NEW</Text>
+    </Link>
+
 </View>
 <View className='mt-10'>
     
-      <Text className='text-white mb-1'>Your Pratice Progress</Text>
+      <Text className='text-darkWhite mb-2'>Your Pratice Progress</Text>
       <View className='justify-between flex-row bg-gray-500 px-11 py-4 h-[85px] rounded-2xl'>
         <View className=''>
 
@@ -43,7 +46,7 @@ const Index = () => {
 
         <Text className='' style={styles.text}>1</Text>
         </View>
-        <Text>Activities done</Text>
+        <Text className='mt-2 '>Activities done</Text>
         </View>
 <View className=' w-[0.1px] bg-darkWhite h-full '/>
         <View>
@@ -52,16 +55,15 @@ const Index = () => {
 
         <Text style={styles.text} className=''>30 mins</Text>
         </View>
-        <Text>Time on tasks</Text>
+        <Text className='mt-2'>Time on tasks</Text>
         </View>
       </View>
 </View>
-      <Link href="/(tabs)/practice/codingSpace">codingSpace</Link>
-      <View className='bg-[#7a808d] p-3 pb-5 rounded-2xl mt-7'>
-        <Text className='text-capitalize '>Unleash Your Creativity</Text>
-        <Text>Create, run, and collaborate on projects directly from your phone.</Text>
+      <View className='bg-gray-500 p-3 pb-5 rounded-2xl mt-7'>
+        <Text className='text-capitalize font-montseratMedium text-xl'>Unleash Your Creativity</Text>
+        <Text className='tracking-wide '>Create, run, and collaborate on projects directly from your phone.</Text>
         <TouchableOpacity className='bg-darkWhite p-2 w-[120px] items-center mt-5 border-[1px] border-green-500 rounded-2xl '>
-            <Text>GET STARTED</Text>
+            <Text className='font-semibold'>GET STARTED</Text>
         </TouchableOpacity>
       </View>
     </View>
@@ -92,6 +94,6 @@ const styles = StyleSheet.create({
   },
   text: {
     textAlign: 'center',
-    fontWeight: 'bold',
+    fontWeight: 'medium',
   },
 });

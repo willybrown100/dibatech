@@ -9,6 +9,8 @@ module.exports = {
         montseratBold:["Montserrat-Bold","sans serif"],
         montseratRegular:["Montserrat-Regular", "sans-serif"],
         montseratMedium:["Montserrat-Medium", "sans-serif"],
+        montseratBlack:["Montserrat-Black", "sans-serif"],
+        montseratsemiBold:["Montserrat-SemiBold", "sans-serif"],
       }
     },
   },

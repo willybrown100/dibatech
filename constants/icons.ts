@@ -30,5 +30,10 @@ import css  from "@/assets/icons/css3.png"
 import js  from "@/assets/icons/js.png"
 import python  from "@/assets/icons/python.png"
 import ex  from "@/assets/icons/ex.png"
+import award  from "@/assets/icons/award.png"
+import padlock1   from "@/assets/icons/padlock 1.png"
+import trophy1   from "@/assets/icons/trophy1.png"
+import Starsmall   from "@/assets/icons/Starsmall.png"
+import Rectangle   from "@/assets/icons/Rectangle.png"
 
-export default {eye,eyehide,apple,facebook,instagram,google, arrowback, gear,circleUser,graduationcap,code,rocket,trophy,user,arrowup,darkmode,goal,bell,clock,padlock,curvearrow,twitter,tiktok,instagramdark,help,googledoc,delete1,js,css,html,python,ex}
+export default {eye,eyehide,apple,facebook,instagram,google, arrowback, gear,circleUser,graduationcap,code,rocket,trophy,user,arrowup,darkmode,goal,bell,clock,padlock,curvearrow,twitter,tiktok,instagramdark,help,googledoc,delete1,js,css,html,python,ex,award,padlock1,trophy1,Starsmall,Rectangle}

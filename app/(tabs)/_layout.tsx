@@ -25,7 +25,7 @@ return<View className='flex-col items-center justify-center w-full flex-1 '>
    color:"white"
     },
  tabBarStyle: {
-  backgroundColor: "#122f2f",
+  backgroundColor: "#1A3A3A",
   borderTopWidth: 0,
   elevation: 0,                 // Android
   shadowOpacity: 0,            // iOS

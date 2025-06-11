@@ -14,9 +14,6 @@ const AddBio = () => {
   const toggleSwitch = () => setIsEnabled(previousState => !previousState);
      const navigation = useNavigation();
   useLayoutEffect(() => {
-    const handleClicktoProfileSetting= function(){
- router.back()
-    }
     navigation.setOptions({
       headerShown: true,
 

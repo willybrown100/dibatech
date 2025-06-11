@@ -10,6 +10,8 @@ export default function RootLayout() {
     "Montserrat-Bold":require("../assets/fonts/Montserrat-Bold.ttf"),
     "Montserrat-Regular":require("../assets/fonts/Montserrat-Regular.ttf"),
     "Montserrat-Medium":require("../assets/fonts/Montserrat-Medium.ttf"),
+    "Montserrat-Black":require("../assets/fonts/Montserrat-Black.ttf"),
+    "Montserrat-SemiBold":require("../assets/fonts/Montserrat-SemiBold.ttf"),
 
   })
 useEffect(() => {
@@ -32,5 +34,6 @@ useEffect(() => {
     <Stack.Screen options={{headerShown:false}} name="(auth)"/>
     <Stack.Screen options={{headerShown:false}} name="(tabs)"/>
     <Stack.Screen options={{headerShown:false}} name="login"/>
+    <Stack.Screen options={{headerShown:false}} name="courseContent"/>
   </Stack>;
 }
